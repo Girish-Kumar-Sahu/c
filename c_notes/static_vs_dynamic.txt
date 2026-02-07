@@ -1,0 +1,160 @@
+🧠 Core idea (in one line)
+
+Static = decided before the program runs
+Dynamic = decided while the program is running
+
+That’s it. Everything comes from this.
+
+1️⃣ Static vs Dynamic Typing
+🔹 Static typing (C, C++)
+int x = 5;
+x = 3.5;   // ❌ not allowed
+
+
+Meaning:
+
+Type of x is fixed at compile time
+
+Compiler already knows:
+
+how much memory
+
+how to treat the value
+
+You cannot change it later.
+
+🔹 Dynamic typing (Python, JS)
+x = 5
+x = "hello"   # ✅ allowed
+
+
+Meaning:
+
+Type is decided at runtime
+
+Variable is just a label
+
+Value carries the type, not the variable
+
+🧠 Mental model
+
+C: “This box will always store an integer”
+
+Python/JS: “This name points to whatever value I give it”
+
+2️⃣ Static vs Dynamic Memory Allocation
+
+This is HUGE in C.
+
+🔹 Static (or automatic) memory
+int arr[10];
+
+
+Size fixed
+
+Memory allocated on stack
+
+Exists only inside the scope
+
+Fast, but limited
+
+Decided before or at function entry.
+
+🔹 Dynamic memory
+int *arr = (int*)malloc(10 * sizeof(int));
+
+
+Size decided at runtime
+
+Memory allocated on heap
+
+You control lifetime
+
+Must free manually
+
+🧠 Analogy
+
+Static → hostel room (fixed size)
+
+Dynamic → hotel room (book as needed)
+
+3️⃣ Static vs Dynamic Binding
+🔹 Static binding (C)
+add(2, 3);
+
+
+Function call decided at compile time
+
+Faster
+
+No surprises
+
+🔹 Dynamic binding (JS, Python)
+obj.method()
+
+
+Method decided at runtime
+
+Flexible (polymorphism)
+
+Slightly slower
+
+4️⃣ Static vs Dynamic Libraries
+🔹 Static library
+
+Code copied into your program
+
+Bigger executable
+
+No external dependency
+
+🔹 Dynamic library
+
+Loaded at runtime (.dll, .so)
+
+Smaller executable
+
+Needs library present
+
+(You’ll see this later in OS / systems)
+
+🔑 Why C feels “strict”
+
+Because everything is mostly static:
+
+static typing
+
+static binding
+
+explicit memory control
+
+This makes C:
+
+very fast
+
+predictable
+
+close to hardware
+
+🔥 Why Python/JS feels “easy”
+
+Because everything is dynamic:
+
+dynamic typing
+
+dynamic memory
+
+runtime decisions
+
+This makes them:
+
+flexible
+
+beginner-friendly
+
+slower
+
+🟢 One-liner summary
+Term	Meaning
+Static	Decided before execution
+Dynamic	Decided during execution

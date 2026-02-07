@@ -1,0 +1,168 @@
+👉 Today we’ll cover pure C syntax.
+Pointers & memory come after this.
+
+🔹 C PROGRAM STRUCTURE
+#include <stdio.h>   // standard input-output
+
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}
+
+
+Rules
+
+Execution starts from main()
+
+Every statement ends with ;
+
+{ } define blocks
+
+return 0; → program ran successfully
+
+🔹 VARIABLES & DATA TYPES
+int a = 10;
+float b = 3.14;
+double c = 2.718;
+char ch = 'A';
+
+
+⚠️ C is statically typed
+
+a = 3.5;   // ❌ error or data loss
+
+🔹 INPUT / OUTPUT
+int x;
+scanf("%d", &x);        // input
+printf("x = %d", x);   // output
+
+
+Key thing:
+
+&x → address of x (pointer concept, we’ll go deep later)
+
+Format specifiers:
+
+%d → int
+
+%f → float
+
+%lf → double
+
+%c → char
+
+%s → string (char array)
+
+🔹 OPERATORS
+
+Same as Python/JS mostly.
+
++  -  *  /  %
+== != > < >= <=
+&& || !
+
+
+⚠️ Division:
+
+5 / 2   // 2 (int division)
+5.0 / 2 // 2.5
+
+🔹 CONDITIONALS
+if (x > 0) {
+    printf("Positive");
+} else if (x < 0) {
+    printf("Negative");
+} else {
+    printf("Zero");
+}
+
+
+No truthy/falsy like JS.
+Condition must evaluate to 0 or non-zero.
+
+🔹 LOOPS
+for
+for (int i = 0; i < 5; i++) {
+    printf("%d ", i);
+}
+
+while
+int i = 0;
+while (i < 5) {
+    printf("%d ", i);
+    i++;
+}
+
+do-while
+do {
+    printf("Runs once");
+} while (0);
+
+🔹 FUNCTIONS
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int sum = add(3, 4);
+    printf("%d", sum);
+}
+
+
+⚠️ C uses pass by value (always).
+
+🔹 ARRAYS (IMPORTANT)
+int arr[5] = {1, 2, 3, 4, 5};
+
+printf("%d", arr[0]);  // first element
+
+
+Looping:
+
+for (int i = 0; i < 5; i++) {
+    printf("%d ", arr[i]);
+}
+
+
+⚠️ No bounds checking (dangerous but powerful).
+
+🔹 STRINGS (VERY DIFFERENT FROM PYTHON)
+char name[10] = "Girish";
+printf("%s", name);
+
+
+String = array of characters
+
+Ends with \0 (null character)
+
+char name[] = {'G','i','r','i','s','h','\0'};
+
+🔹 SWITCH
+int n = 2;
+
+switch (n) {
+    case 1:
+        printf("One");
+        break;
+    case 2:
+        printf("Two");
+        break;
+    default:
+        printf("Other");
+}
+
+
+⚠️ break is mandatory.
+
+🔹 COMMENTS
+// single line
+
+/* multi
+   line */
+
+🔹 IMPORTANT DIFFERENCES FROM PYTHON / JS
+Concept	Python / JS	C
+Types	dynamic	static
+Memory	automatic	manual
+Strings	built-in	char arrays
+Safety	high	low (you control it)
