@@ -15,7 +15,7 @@ int main(){
     float radius;
     printf("\nEnter radius of circle: ");
     scanf("%f",&radius);
-    const float PI = 3.14;
+    const float PI = 3.14; // using capital latters to show constant variables
     printf("area of given radius %.2f circle area is %.2f \n", radius, PI * radius*radius);
 
         return 0;
