@@ -1,4 +1,4 @@
-👉 Today we’ll cover pure C syntax.
+We’ll cover pure C syntax.
 Pointers & memory come after this.
 
 🔹 C PROGRAM STRUCTURE
