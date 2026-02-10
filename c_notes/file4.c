@@ -38,7 +38,7 @@ int main() {
     printf("enter your marks to get your grades: ");
     scanf("%d", &mark);
 
-    if (mark >= 30 && mark<=100){
+    if (mark >= 0 && mark<=100){
         if (mark<=30){
             printf("fail C grade\n");
         }
@@ -54,6 +54,19 @@ int main() {
     }
     else{
         printf("wrong input\n");
+    }
+
+
+    // check if a character is upper case or lower case
+    char ch;
+    printf("enter a single char: ");
+    scanf(" %c", &ch);
+    if (ch >= 'a' && ch<='z'){
+        printf("lower case\n");
+    }else if (ch>='A' && ch<='Z'){
+        printf("upper case\n");
+    } else {
+        printf("not an aplhpabatical character\n");
     }
     return 0;
 }
