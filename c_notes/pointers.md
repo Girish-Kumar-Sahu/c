@@ -1,12 +1,4 @@
-Alright. Buckle up 😄
-**Pointers are the heart of C** — once this clicks, C (and DSA) suddenly feel *logical* instead of scary.
-
-I’ll go **slow, visual, and practical**. No jargon dumping.
-
----
-
 # 🧠 What is a pointer? (core idea)
-
 > A **pointer is a variable that stores the address of another variable**
 
 Not the value.
