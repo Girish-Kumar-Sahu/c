@@ -17,7 +17,10 @@ int main() {
         final_val[i] = 0.18 * items[i] + items[i];
         printf("%.2f\n", final_val[i]);
     }
-    
-    
+    // pointer arithmetic
+    int age = 223, *ptr = &age;
+    printf("address of age = %p or %u\n",ptr, ptr);
+    ptr++;
+    printf("address of age aftrt increment = %p or %u\n",ptr,  ptr);
     return 0;
 }
