@@ -22,5 +22,13 @@ int main() {
     printf("address of age = %p or %u\n",ptr, ptr);
     ptr++;
     printf("address of age aftrt increment = %p or %u\n",ptr,  ptr);
+
+
+    // 2d array
+    int marks2[2][3];
+    marks2[0][0] = 21;
+    marks2[0][1] = 32;
+    printf("%d\n",marks2[0][1]);
+    printf("%d", marks2[1][2]);
     return 0;
 }
