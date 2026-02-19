@@ -44,7 +44,15 @@ void odd(int arr[], int n){
    printf("\n");
 }
 
-
+// creating a 2d array to store table of 2 numbers
+void storTables(int arr[][10], int ps, int lmt, int number){
+    for (int i = 0; i < lmt; i++)
+    {
+       arr[ps][i] = number*(i+1);
+       printf("\n%d ", arr[ps][i]);
+    }
+    
+}
 
 int main() {
    // writing a function to count numbers of odd numbers in an array
@@ -64,5 +72,13 @@ int main() {
     printf("\nreversing the array\t");
     reverse(arr, n);
     prarr(arr,n);
+
+    int tables[2][10];
+    printf("\ntable of 2");
+    storTables(tables, 0 /* 0 represents index*/, 10, 2);
+    printf("\n\ntable of 3");
+    storTables(tables, 1 /* 1 represents index*/, 10, 3);
+
+    
     return 0;  
 }
