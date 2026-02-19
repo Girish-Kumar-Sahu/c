@@ -2,23 +2,39 @@
 
 
 // writing a function to reverse an array
-int *reverse(int arr[], int n){
+void reverse(int arr[], int n){
     // n is the size of our array
     for(int i = 0; i<=(n-1)/2; i++){
         int temp = arr[i];
         arr[i] = arr[n-i];
         arr[n-i] = temp;
     }
-    return arr;
+}
+//printing array
+void prarr(int arr[], int n){
+   
+for(int i=0;i<n;i++){
+    printf("%d\t", arr[i]);
 }
 
+}
+// writing a code for fibonacci 
+void fib(int n){
+    int arr[n];
+    arr[0] = 0;
+    arr[1] = 1;
+    for (int i = 2; i < n; i++)
+    {
+        arr[i] = arr[i-1] + arr[i-2];
+    }
+    prarr(arr,n);
+    
+}
 
-
-int main() {
-   // writing a function to count numbers of odd numbers in an array
-   int arr[] = {212,323,12,342,432,343,101};
-   int count = 0;
-   for (int i = 0; i < sizeof(arr) / sizeof(arr[0]); i++)
+// writing a function to count numbers of odd numbers in an array
+void odd(int arr[], int n){
+    int count = 0;
+     for (int i = 0; i < n; i++)
    {
         if (arr[i]%2!=0){
             count++;
@@ -26,11 +42,27 @@ int main() {
         printf("%d\t", count);
    }
    printf("\n");
-   int *res = reverse(arr,6);
-
-for(int i=0;i<6;i++){
-    printf("%d ", res[i]);
 }
 
+
+
+int main() {
+   // writing a function to count numbers of odd numbers in an array
+   int arr[] = {0,1,2,3,4,56,7,8,9};
+   // calculating the size of array
+   int n = sizeof(arr) / sizeof(arr[0]);
+
+
+    printf("prarr funtion work\t");
+    prarr(arr,n);
+
+    printf("\nodd num function \t");
+    odd(arr, n);
+
+   printf("\nfib function work\t");
+    fib(10);
+    printf("\nreversing the array\t");
+    reverse(arr, n);
+    prarr(arr,n);
     return 0;  
 }
