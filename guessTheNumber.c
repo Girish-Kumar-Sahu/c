@@ -5,27 +5,57 @@
 int main() {
     srand(time(NULL));
 
-    int num = rand() % 101;   // secret number (0–100)
-    int guessed;
+    int level;
+    int maxRange;
+    int num, guessed;
     int guesses = 0;
 
-    printf("=== Number Guessing Game ===\n");
+    printf("=== Number Guessing Game (Level 2) ===\n");
+    printf("Select Difficulty:\n");
+    printf("1. Easy (0-50)\n");
+    printf("2. Medium (0-100)\n");
+    printf("3. Hard (0-500)\n");
+    printf("Enter choice: ");
+    scanf("%d", &level);
+
+    // Decide range based on level
+    if(level == 1) {
+        maxRange = 50;
+    }
+    else if(level == 2) {
+        maxRange = 100;
+    }
+    else {
+        maxRange = 500;
+    }
+
+    num = rand() % (maxRange + 1);
+
+    printf("\nI have selected a number between 0 and %d\n", maxRange);
 
     do {
-        printf("Guess the number between 0 and 100: ");
+        printf("Enter your guess: ");
         scanf("%d", &guessed);
         guesses++;
 
-        if (guessed > num) {
+        if(guessed > num) {
             printf("Too High!\n");
         }
-        else if (guessed < num) {
+        else if(guessed < num) {
             printf("Too Low!\n");
         }
 
-    } while (guessed != num);
+    } while(guessed != num);
 
-    printf("Correct! You guessed it in %d tries.\n", guesses);
+    printf("\n Correct! You guessed it in %d tries.\n", guesses);
+
+    // Simple scoring system
+    if(guesses <= 5)
+        printf("Pro Player!\n");
+    else if(guesses <= 10)
+        printf(" Good Job!\n");
+    else
+        printf("Keep Practicing!\n");
 
     return 0;
 }
