@@ -5,13 +5,13 @@
 
 void printChoice(int choice) {
     if (choice == 0) {
-        printf("Snake 🐍\n");
+        printf("Snake\n");
     }
     else if (choice == 1) {
-        printf("Water 💧\n");
+        printf("Water\n");
     }
     else {
-        printf("Gun 🔫\n");
+        printf("Gun\n");
     }
 }
 
@@ -72,10 +72,10 @@ int main() {
         int computer = rand() % 3;
 
         printf("\nYou chose: ");
-    
+        printChoice(player);
 
         printf("Computer chose: ");
-       
+        printChoice(computer);
 
         int result = checkWinner(player, computer);
 
@@ -98,9 +98,9 @@ int main() {
     printf("\n===== FINAL RESULT =====\n");
 
     if (playerScore > computerScore)
-        printf("🏆 Congratulations! You Won the Game!\n");
+        printf("Congratulations! You Won the Game!\n");
     else
-        printf("💻 Computer Won the Game!\n");
+        printf("Computer Won the Game!\n");
 
     return 0;
 }
