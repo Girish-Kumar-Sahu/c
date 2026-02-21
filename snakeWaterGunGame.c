@@ -72,10 +72,10 @@ int main() {
         int computer = rand() % 3;
 
         printf("\nYou chose: ");
-        printChoice(player);
+    
 
         printf("Computer chose: ");
-        printChoice(computer);
+       
 
         int result = checkWinner(player, computer);
 
