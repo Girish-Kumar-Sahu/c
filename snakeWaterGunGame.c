@@ -18,5 +18,19 @@ int main() {
 
     printf("Computer chose: %d\n", computer);
 
+    if (player == computer) {
+    printf("It's a Draw!\n");
+}
+else if (
+    (player == 0 && computer == 1) ||
+    (player == 1 && computer == 2) ||
+    (player == 2 && computer == 0)
+) {
+    printf("You Win!\n");
+}
+else {
+    printf("Computer Wins!\n");
+}
+
     return 0;
 }
