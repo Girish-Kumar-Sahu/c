@@ -2,6 +2,13 @@
 #include <string.h>
 
 int strLen(char str[]);
+void prarr(char arr[], int n){
+   
+for(int i=0;i<n;i++){
+    printf("%c", arr[i]);
+}
+
+}
 
 int main() {
     char name[100];  // allocate writable buffer
@@ -23,15 +30,29 @@ int main() {
     printf("Your name's length is = %zu\n", strlen(name));
     printf("Your name's length is = %zu\n", strLen(name));
     printf("Your name's address is = %zu\n", name); //printing address
+    char str[] = "123,";
+    strcat(str,"456");
+    puts(str);
+    printf(("%s\n",str));
+
+    // lets customize and take input of name by %c
+    char ch;
+    printf("\nenter your name again: ");
+    for (int i = 0; scanf("%c",&ch) && ch != '\n'; i++)
+    {
+        
+        name[i] = ch;
+    }
+    prarr(name, strLen(name));
+    
     return 0;
 }
 
 
-//counting lentgh of a string function
+//home made counting lentgh of a string function 
 int strLen(char str[]){
     int count = 0;
-    for (int i = 0; str[i]!='\0' ; i++)
-    {
+    for (int i = 0; str[i]!='\0' ; i++){
         count++;
     }
     return count;
