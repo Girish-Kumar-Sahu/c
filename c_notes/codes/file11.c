@@ -44,6 +44,7 @@ int main() {
         name[i] = ch;
     }
     prarr(name, strLen(name));
+    printf("%s",name);
     
     return 0;
 }
