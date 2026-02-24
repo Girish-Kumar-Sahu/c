@@ -1,4 +1,4 @@
-Here is a **clean, structured exam-ready answer** you can directly learn and write. I’ll keep it **simple, organized, and technically correct** so it fits engineering exam expectations.
+
 
 ---
 
@@ -268,8 +268,3 @@ Data types define the nature of data stored in variables, while operators perfor
 
 ---
 
-If you want, Girish, I can also give you:
-
-✅ **Ultra-short 5-marker answer** (most asked in engineering exams)
-✅ **Diagram-based classification** so you remember quickly during revision
-✅ Or a **one-page handwritten-style notes format** you can memorize before exams.
