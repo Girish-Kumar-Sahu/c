@@ -11,5 +11,10 @@ int main() {
         printf("Dice: %d\n", dice);
     }
 
+        for (int i = 0; i < 5; i++) {
+        printf("%d\n", rand());
+    }
+
+
     return 0;
 }
