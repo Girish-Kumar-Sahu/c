@@ -11,9 +11,13 @@ int main() {
 }
 
 void slice(char s[], int n, int m){
-    for (int i = n; i <= m; i++)
+    char newS[100];
+    int j =0;
+    for (int i = n; i <= m; i++, j++)
     {
-        printf("%c",s[i]);
+       newS[j] = s[i];
     }
+    newS[j] = "\0";
+    puts(newS);
     
 }
