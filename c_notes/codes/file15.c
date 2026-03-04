@@ -6,6 +6,8 @@ struct student{
     int roll;
 }; //we need semicolon here
 
+
+
 int main() {
     struct student s1;
     strcpy(s1.name, "girish"); // we cant assign just go search it why
@@ -22,7 +24,14 @@ int main() {
     aids[1].roll = 7;
 
     printf(cse[0].name);
-    printf("%d",aids[1].roll);
-    //yeah
+    printf("\n%d\n",aids[1].roll);
+    //yeah 
+
+    // initialization
+    struct student cseWala = {"ramesh", 89};
+    struct student aidsWala = {"baba", 89};
+    struct student aimlWala = {0};
+    printf("%s %s %s , %d %d %d", cseWala.name, aidsWala.name, aimlWala.name, cseWala.roll, aidsWala.roll
+    , aimlWala.roll);
     return 0;
 }
