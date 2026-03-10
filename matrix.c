@@ -1,4 +1,13 @@
 /*
+
+Matrix A is m × n
+
+Matrix B is n × p
+
+Then the result matrix C will be m × p.
+
+
+
 for each row of A
     for each column of B
         multiply corresponding elements
